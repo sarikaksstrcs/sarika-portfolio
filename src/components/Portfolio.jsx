@@ -11,6 +11,7 @@ import { ExperienceCard } from './atoms/ExperienceCard';
 import { ExperienceSection } from './molecules/ExperianceSection';
 import { ProjectCard } from './atoms/ProjectCard';
 import { ProjectsSection } from './molecules/ProjectSection';
+import { SkillsSection } from './molecules/SkillSection';
 
 const Portfolio = () => {
   const [xp, setXp] = useState(0);
@@ -116,32 +117,7 @@ const Portfolio = () => {
       />
 
       {/* Skills Section */}
-      <section className="py-20 px-6 border-t-2 border-white/20">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 font-mono">
-          // SKILL_TREE
-        </h2>
-        <p className="text-center text-gray-400 mb-16 font-mono">Technical Arsenal: {Object.values(skills).flat().length} Skills</p>
-        
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Object.entries(skills).map(([category, items], index) => (
-            <div key={index} 
-                 className="border-2 border-white/40 p-6 hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 group">
-              <h3 className="text-xl font-bold mb-4 font-mono flex items-center gap-2">
-                <Code className="w-5 h-5" />
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {items.map((skill, i) => (
-                  <span key={i} 
-                        className="px-3 py-1 border border-white/40 font-mono text-xs group-hover:bg-black group-hover:text-white transition-all">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <SkillsSection skills={skills} />
 
       {/* Education & Certifications - Condensed */}
       <section className="py-20 px-6 border-t-2 border-white/20">
