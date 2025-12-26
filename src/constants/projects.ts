@@ -83,5 +83,57 @@ export const projects = [
         },
         impact: "Improves code quality and security through automated analysis"
       }
+    },
+    {
+      id: 'swasthyachain',
+      name: "SwasthyaChain",
+      year: "2025",
+      tagline: "Full-Stack Decentralized Health Records Platform",
+      description:
+        "A full-stack healthcare records platform with a FastAPI backend and React (Vite) frontend, enabling secure, consent-driven medical data storage, sharing, and AI-assisted insights.",
+      github:'https://github.com/sarikaksstrcs/swasthyachain/tree/main',
+      tech: [
+        "FastAPI",
+        "Python",
+        "React",
+        "Vite",
+        "MongoDB",
+        "IPFS",
+        "Blockchain",
+        "AES-256 Encryption",
+        "JWT",
+        "Google Gemini AI",
+        "Docker"
+      ],
+    stars: 5,
+    xp: 90,
+    details: {
+      overview:
+        "SwasthyaChain is a full-stack healthcare management system that combines a high-performance FastAPI backend with a modern React (Vite) frontend. It demonstrates secure medical record handling using encryption, decentralized storage (IPFS), blockchain-based audit trails, and AI-powered health insights, while giving patients complete control over data access through consent management.",
+      features: [
+        "Full-stack architecture with FastAPI backend and React (Vite) frontend",
+        "Secure authentication using JWT with role-based access control",
+        "Patient-controlled consent management for medical data sharing",
+        "AES-256 encryption for medical records at rest and in transit",
+        "Decentralized file storage using IPFS",
+        "Blockchain-backed immutable audit logging",
+        "AI-assisted health summaries, recommendations, and risk prediction",
+        "Interactive API documentation via OpenAPI (Swagger)",
+        "Dockerized setup for production-ready deployment",
+        "Environment-based configuration using .env files"
+      ],
+      techStack: {
+        frontend: "React with Vite for fast development, modular components, and modern UI",
+        backend: "FastAPI (Python) for asynchronous, high-performance REST APIs",
+        database: "MongoDB for flexible and scalable healthcare data storage",
+        security: "JWT authentication, bcrypt password hashing, AES-256 encryption",
+        decentralized: "IPFS for file storage and blockchain helpers for audit trails",
+        ai: "Google Gemini AI for health summaries, recommendations, and predictions",
+        devops: "Docker, uvicorn, pytest, and Vite dev server for development and deployment"
+      },
+      impact:
+        "Demonstrates a production-grade full-stack healthcare system that prioritizes data security, patient ownership, and transparency while showcasing modern web technologies, decentralized systems, and applied AI in healthcare."
     }
-  ];
+    }
+
+];
