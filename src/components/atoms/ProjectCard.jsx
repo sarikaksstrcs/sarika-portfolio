@@ -1,4 +1,5 @@
 import { Check, ExternalLink, Star } from "lucide-react";
+import { Play } from "lucide-react"; // Example logo icon for Live Demo
 
 export const ProjectCard = ({ project, completedActions, onClick }) => {
   const isCompleted = completedActions.has(`project-${project.id}`);
@@ -7,9 +8,11 @@ export const ProjectCard = ({ project, completedActions, onClick }) => {
     <div 
       onClick={onClick}
       className={`group border-2 border-white/40 p-6 hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 cursor-pointer relative overflow-hidden ${isCompleted ? 'border-white' : ''}`}>
+      
       {isCompleted && (
         <Check className="absolute top-2 right-2 w-6 h-6" />
       )}
+      
       <div className="absolute top-0 left-0 right-0 h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
       
       <div className="flex justify-between items-start mb-4">
@@ -39,9 +42,24 @@ export const ProjectCard = ({ project, completedActions, onClick }) => {
         )}
       </div>
       
-      <div className="flex items-center gap-2 text-sm font-mono underline">
-        View details
-        <ExternalLink size={16} />
+      <div className="flex items-stretch place-content-between  gap-4">
+        <div className="flex items-center gap-2 text-sm font-mono underline cursor-pointer">
+          View details
+          <ExternalLink size={16} />
+        </div>
+
+        {project.liveDemoUrl && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(project.liveDemoUrl, '_blank');
+              }}
+              className="px-4 py-2 bg-white text-black rounded-lg hover:bg-black hover:text-white transition-colors flex items-center gap-2"
+            >
+              <Play className="w-4 h-4" />
+              Live Demo
+            </button>
+          )}
       </div>
     </div>
   );

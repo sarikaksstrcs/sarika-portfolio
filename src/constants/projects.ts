@@ -28,6 +28,35 @@ export const projects = [
       }
     },
     {
+      id: 'patentbot',
+      name: "Patent Interview Chatbot",
+      year: "2024",
+      tagline: "AI Interview Assistant for Patent Applications",
+      liveDemoUrl: "https://patent-interview-application.onrender.com",
+      description: "A chatbot that conducts simulated patent application interviews using GPT-3 and Whisper for speech recognition and AI guidance.",
+      tech: ["React", "Node.js", "FastAPI", "GPT-3", "Whisper"],
+      stars: 5,
+      xp: 70,
+      details: {
+        overview: "An intelligent AI assistant that simulates patent interviews, helping inventors practice and refine their responses before submitting applications.",
+        features: [
+          "Conducts interactive AI-driven patent interviews",
+          "Speech-to-text input using Whisper",
+          "Real-time feedback and suggestions on answers",
+          "Dynamic question generation based on patent category",
+          "Backend API with FastAPI and Node.js for session management",
+          "GPT-3 powered contextual understanding for guidance"
+        ],
+        techStack: {
+          frontend: "React for responsive and interactive user interface",
+          backend: "Node.js and FastAPI for handling API requests and managing interview sessions",
+          ai: "GPT-3 for intelligent conversational responses and Whisper for speech recognition"
+        },
+        impact: "Enables inventors to practice patent interviews, improving the quality of applications and reducing errors."
+      }
+    }
+,
+    {
       id: 'mentalease',
       name: "MentalEase.ai",
       year: "2024",
