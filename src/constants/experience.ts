@@ -3,30 +3,55 @@ import { ArmadaIcon, TataIcon, TuringIcon } from "../assets/icons/companyIcons";
 
 export const experience = [
     {
-      id: 'armada',
-      role: "Software Engineer",
-      company: "ARMADA",
-      period: "Feb 2025 – Present",
-      icon: ArmadaIcon,
-      xp: 75,
-      highlights: [
-        "Built React Native app managing 5,000+ Starlink terminals",
-        "Achieved 99.9% crash-free sessions",
-        "Created Go-based Push Notification microservice"
-      ],
-      details: {
-        responsibilities: [
-          "Developed and optimized cross-platform mobile app (iOS & Android) for 5,000+ Starlink terminals",
-          "Integrated Swift modules using Native Modules for Apple ecosystem compatibility",
-          "Implemented Zustand + TanStack Query for efficient state management",
-          "Designed modular UI components with Storybook and Material UI",
-          "Automated testing with Jest achieving 95% coverage, reduced bugs by 40%",
-          "Led AppStore and PlayStore deployments via CI/CD pipelines"
-        ],
-        technologies: ["React Native", "Swift", "Go", "Kafka", "Postgres", "Azure", "Firebase", "Jest", "GitLab CI/CD"],
-        impact: "Ensured 99.9% crash-free sessions with <1s load time through optimization"
-      }
-    },
+  id: 'armada',
+  role: "Software Engineer",
+  company: "ARMADA",
+  period: "Feb 2025 – Present",
+  icon: ArmadaIcon,
+  xp: 75,
+  highlights: [
+    "Built React Native app managing 5,000+ Starlink terminals",
+    "Designed Go microservices with Kafka on AKS for real-time notifications using Azure Notification Hub",
+    "Achieved 99.9% crash-free sessions",
+  ],
+  details: {
+    responsibilities: [
+      "Developed and optimized cross-platform mobile application (iOS & Android) managing 5,000+ Starlink terminals",
+      "Built Go push-notification microservices with Kafka on Azure Kubernetes Service (AKS)",
+      "Integrated Azure Notification Hub with Firebase Cloud Messaging (FCM) and Apple Push Notification service (APNs)",
+      "Implemented Kafka-based event streaming to handle large-scale notification delivery",
+      "Built native Swift modules using React Native Native Modules for seamless Apple ecosystem integration",
+      "Implemented scalable state management using Zustand and TanStack Query",
+      "Designed modular, reusable UI components using Storybook and Material UI",
+      "Automated unit and integration testing with Jest, achieving 95% test coverage and reducing production bugs by 40%",
+      "Led App Store and Google Play deployments through GitLab CI/CD pipelines"
+    ],
+    technologies: [
+      // Mobile
+      "React Native",
+      "Swift",
+      "TypeScript",
+
+      // Backend & Messaging
+      "Go",
+      "Kafka",
+      "PostgreSQL",
+
+      // Cloud & Infrastructure
+      "Azure",
+      "AKS",
+      "ANH",
+      "FCM",
+      "APNs",
+
+      // Tooling & DevOps
+      "GitLab CI/CD",
+      "Jest",
+      "Storybook"
+    ],
+    impact: "Delivered a highly reliable mobile platform with 99.9% crash-free sessions and sub-second load times through performance tuning and scalable cloud infrastructure"
+  }
+},
     {
       id: 'turing',
       role: "AI Engineer",

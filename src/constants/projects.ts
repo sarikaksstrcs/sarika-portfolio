@@ -33,7 +33,7 @@ export const projects = [
       year: "2024",
       tagline: "Mental Health Companion App",
       description: "AI-powered mental health companion with GPT-3 and immersive 3D UI",
-      tech: ["MERN", "GPT-3", "React Native", "LangChain", "3D"],
+      tech: ["MERN", "GPT-3", "React", "LangChain", "React-Three-Fiber", "Blender", "Tailwind CSS"],
       stars: 5,
       github:'https://github.com/sarikaksstrcs/MentalEase.ai',
       xp: 60,
@@ -43,7 +43,7 @@ export const projects = [
           "GPT-3 integration for intelligent conversations",
           "LangChain for context-aware responses",
           "Text-to-Speech (TTS) for accessibility",
-          "Sentiment analysis for mood tracking",
+          "Sentiment analysis using face-recognition using OpenCV and voice-analysis for mood tracking",
           "3D UI using React-Three-Fiber and Blender",
           "Cross-platform mobile support"
         ],
