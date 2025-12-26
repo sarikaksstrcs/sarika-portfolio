@@ -19,6 +19,7 @@ import { ProjectDetailModal } from './atoms/ProjectDetailModal';
 import { Style } from './atoms/Style';
 import { HeroSection } from './molecules/Hero';
 
+
 const Portfolio = () => {
   const [xp, setXp] = useState(0);
   const [level, setLevel] = useState(1);
@@ -70,11 +71,12 @@ const Portfolio = () => {
   };
 
   const handleResumeDownload = () => {
-    addXP(100, 'resume-download', 'Downloaded Resume - Ready to Hire!');
-    setShowResumeModal(false);
-    // In a real scenario, trigger actual download
-    alert('Resume download started! +100 XP earned');
-  };
+  addXP(100, 'resume-download', 'Downloaded Resume - Ready to Hire!');
+  setShowResumeModal(false);
+
+  window.location.href =
+    'https://drive.google.com/uc?export=download&id=12_Igx4FLH_mcCRUNwH-WwqLWs1KtE3me';
+};
 
   
 
