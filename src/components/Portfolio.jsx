@@ -12,6 +12,10 @@ import { ExperienceSection } from './molecules/ExperianceSection';
 import { ProjectCard } from './atoms/ProjectCard';
 import { ProjectsSection } from './molecules/ProjectSection';
 import { SkillsSection } from './molecules/SkillSection';
+import { CredentialsSection } from './molecules/CredentialsSection';
+import { Footer } from './molecules/Footer';
+import { ResumeModal } from './atoms/ResumeModal';
+import { ExperienceDetailModal } from './atoms/ExperianceModal';
 
 const Portfolio = () => {
   const [xp, setXp] = useState(0);
@@ -120,171 +124,29 @@ const Portfolio = () => {
       <SkillsSection skills={skills} />
 
       {/* Education & Certifications - Condensed */}
-      <section className="py-20 px-6 border-t-2 border-white/20">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 font-mono">
-          // CREDENTIALS
-        </h2>
-        
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          <div className="border-2 border-white/40 p-8 hover:bg-white hover:text-black transition-all group">
-            <h3 className="text-2xl font-bold mb-6 font-mono">Education</h3>
-            <div className="space-y-4">
-              <div className="border-l-2 border-white pl-4">
-                <p className="font-bold font-mono">MCA • CGPA: 9.19/10</p>
-                <p className="text-sm font-mono text-gray-400 group-hover:text-gray-600">CET • 2022-2024</p>
-              </div>
-              <div className="border-l-2 border-white pl-4">
-                <p className="font-bold font-mono flex items-center gap-2">
-                  BSc CS • 92.02%
-                  <Trophy className="w-4 h-4" />
-                </p>
-                <p className="text-sm font-mono text-gray-400 group-hover:text-gray-600">University First Rank • 2019-2022</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-2 border-white/40 p-8 hover:bg-white hover:text-black transition-all group">
-            <h3 className="text-2xl font-bold mb-6 font-mono">Certifications</h3>
-            <div className="space-y-2 text-sm font-mono">
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
-                <span>UGC-NET (CS) 2024</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
-                <span>GATE (CS/DS) 2024</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
-                <span>Microsoft Azure AI 2024</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
-                <span>AWS AI Practitioner 2024</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
-                <span>IBM Cybersecurity 2023</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Trophy className="w-5 h-5" />
-                <span className="font-bold">Extra Mile Award - TATA ELXSI</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CredentialsSection
+      />
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t-2 border-white/20 text-center font-mono">
-        <p className="mb-4 text-xl">Ready to hire? Let's connect!</p>
-        <button
-          onClick={() => setShowResumeModal(true)}
-          className="px-6 py-3 border-2 border-white hover:bg-white hover:text-black transition-all mb-4 font-bold">
-          DOWNLOAD RESUME (+100 XP)
-        </button>
-        <p className="text-xs text-gray-600 mt-6">© 2025 K S SARIKA • Level {level} Recruiter</p>
-      </footer>
+     <Footer
+        level={level}
+        setShowResumeModal={setShowResumeModal}
+      />
 
       {/* Resume Download Modal */}
-      {showResumeModal && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
-          <div className="bg-white text-black p-8 max-w-md w-full border-4 border-white">
-            <div className="flex justify-between items-start mb-6">
-              <h3 className="text-2xl font-bold font-mono">RESUME DOWNLOAD</h3>
-              <button onClick={() => setShowResumeModal(false)}>
-                <X size={24} />
-              </button>
-            </div>
-            <p className="font-mono mb-6">
-              Downloading my resume will earn you <strong>100 XP</strong> and unlock the "Ready to Hire" achievement!
-            </p>
-            <div className="space-y-4">
-              <button
-                onClick={handleResumeDownload}
-                className="w-full px-6 py-3 bg-black text-white font-mono font-bold hover:bg-gray-800 transition-all flex items-center justify-center gap-2">
-                <Download size={20} />
-                DOWNLOAD NOW (+100 XP)
-              </button>
-              <button
-                onClick={() => setShowResumeModal(false)}
-                className="w-full px-6 py-3 border-2 border-black font-mono font-bold hover:bg-gray-100 transition-all">
-                MAYBE LATER
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <ResumeModal
+        show={showResumeModal}
+        onClose={() => setShowResumeModal(false)}
+        onDownload={handleResumeDownload}
+      />
 
       {/* Experience Detail Modal */}
-      {selectedExperience && (
-        <div className="fixed inset-0 bg-black/95 z-50 overflow-y-auto p-6">
-          <div className="max-w-4xl mx-auto bg-white text-black p-8 my-8 border-4 border-white">
-            <div className="flex justify-between items-start mb-6">
-              <button 
-                onClick={() => {
-                  if (!completedActions.has(`exp-${selectedExperience.id}`)) {
-                    addXP(selectedExperience.xp, `exp-${selectedExperience.id}`, `Explored ${selectedExperience.company}`);
-                  }
-                  setSelectedExperience(null);
-                }}
-                className="flex items-center gap-2 font-mono hover:underline">
-                <ArrowLeft size={20} />
-                BACK
-              </button>
-              <button onClick={() => {
-                if (!completedActions.has(`exp-${selectedExperience.id}`)) {
-                  addXP(selectedExperience.xp, `exp-${selectedExperience.id}`, `Explored ${selectedExperience.company}`);
-                }
-                setSelectedExperience(null);
-              }}>
-                <X size={24} />
-              </button>
-            </div>
-            
-            <div className="mb-6">
-              <h2 className="text-4xl font-bold font-mono mb-2">{selectedExperience.role}</h2>
-              <p className="text-2xl font-mono mb-2">{selectedExperience.company}</p>
-              <p className="text-gray-600 font-mono">{selectedExperience.period}</p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-bold font-mono mb-3 border-b-2 border-black pb-2">RESPONSIBILITIES</h3>
-              <ul className="space-y-2 font-mono text-sm">
-                {selectedExperience.details.responsibilities.map((resp, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="mt-1">▹</span>
-                    <span>{resp}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-bold font-mono mb-3 border-b-2 border-black pb-2">TECHNOLOGIES USED</h3>
-              <div className="flex flex-wrap gap-2">
-                {selectedExperience.details.technologies.map((tech, i) => (
-                  <span key={i} className="px-3 py-1 border-2 border-black font-mono text-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="p-4 bg-black text-white font-mono">
-              <p className="font-bold mb-1">IMPACT:</p>
-              <p>{selectedExperience.details.impact}</p>
-            </div>
-
-            <div className="mt-6 text-center">
-              <p className="font-mono text-sm text-gray-600">
-                {completedActions.has(`exp-${selectedExperience.id}`) ? '✓ XP Already Earned' : `+${selectedExperience.xp} XP will be added when you close this`}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
+      <ExperienceDetailModal
+        experience={selectedExperience}
+        onClose={() => setSelectedExperience(null)}
+        completedActions={completedActions}
+        addXP={addXP}
+      />
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/95 z-50 overflow-y-auto p-6">
