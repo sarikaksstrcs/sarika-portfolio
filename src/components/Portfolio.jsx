@@ -9,6 +9,8 @@ import { LevelUp } from './atoms/Levelup';
 import { HeroSection } from './molecules/HEro';
 import { ExperienceCard } from './atoms/ExperienceCard';
 import { ExperienceSection } from './molecules/ExperianceSection';
+import { ProjectCard } from './atoms/ProjectCard';
+import { ProjectsSection } from './molecules/ProjectSection';
 
 const Portfolio = () => {
   const [xp, setXp] = useState(0);
@@ -107,61 +109,11 @@ const Portfolio = () => {
       />
 
       {/* Projects Section */}
-      <section className="py-20 px-6 border-t-2 border-white/20">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 font-mono">
-          // PROJECT_ARCHIVE
-        </h2>
-        <p className="text-center text-gray-400 mb-4 font-mono">Click to explore project details</p>
-        <p className="text-center text-sm text-white mb-16 font-mono">+60 XP per project explored</p>
-        
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-            const isCompleted = completedActions.has(`project-${project.id}`);
-            return (
-              <div key={index} 
-                   onClick={() => setSelectedProject(project)}
-                   className={`group border-2 border-white/40 p-6 hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 cursor-pointer relative overflow-hidden ${isCompleted ? 'border-white' : ''}`}>
-                {isCompleted && (
-                  <Check className="absolute top-2 right-2 w-6 h-6" />
-                )}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold font-mono">{project.name}</h3>
-                  <span className="text-sm text-gray-400 group-hover:text-gray-600 font-mono">{project.year}</span>
-                </div>
-                
-                <p className="text-xs mb-2 font-mono font-bold">{project.tagline}</p>
-                <p className="text-sm mb-4 font-mono">{project.description}</p>
-                
-                <div className="flex items-center gap-1 mb-4">
-                  {Array.from({ length: project.stars }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-white group-hover:fill-black" />
-                  ))}
-                </div>
-                
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tech.slice(0, 3).map((tech, i) => (
-                    <span key={i} className="px-2 py-1 border border-white/40 font-mono text-xs">
-                      {tech}
-                    </span>
-                  ))}
-                  {project.tech.length > 3 && (
-                    <span className="px-2 py-1 border border-white/40 font-mono text-xs">
-                      +{project.tech.length - 3} more
-                    </span>
-                  )}
-                </div>
-                
-                <div className="flex items-center gap-2 text-sm font-mono underline">
-                  View details
-                  <ExternalLink size={16} />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <ProjectsSection
+        projects={projects}
+        completedActions={completedActions}
+        setSelectedProject={setSelectedProject}
+      />
 
       {/* Skills Section */}
       <section className="py-20 px-6 border-t-2 border-white/20">
