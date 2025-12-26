@@ -6,7 +6,6 @@ import Particles from './atoms/Particles';
 import { experience, projects, skills } from '../constants';
 import { StatsHUD } from './atoms/StatHUD';
 import { LevelUp } from './atoms/Levelup';
-import { HeroSection } from './molecules/HEro';
 import { ExperienceCard } from './atoms/ExperienceCard';
 import { ExperienceSection } from './molecules/ExperianceSection';
 import { ProjectCard } from './atoms/ProjectCard';
@@ -18,6 +17,7 @@ import { ResumeModal } from './atoms/ResumeModal';
 import { ExperienceDetailModal } from './atoms/ExperianceModal';
 import { ProjectDetailModal } from './atoms/ProjectDetailModal';
 import { Style } from './atoms/Style';
+import { HeroSection } from './molecules/Hero';
 
 const Portfolio = () => {
   const [xp, setXp] = useState(0);
