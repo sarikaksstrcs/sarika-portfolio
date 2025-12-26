@@ -1,4 +1,5 @@
 import { Award, Brain, Rocket } from "lucide-react";
+import { ArmadaIcon, TataIcon, TuringIcon } from "../assets/icons/companyIcons";
 
 export const experience = [
     {
@@ -6,7 +7,7 @@ export const experience = [
       role: "Software Engineer",
       company: "ARMADA",
       period: "Feb 2025 – Present",
-      icon: Rocket,
+      icon: ArmadaIcon,
       xp: 75,
       highlights: [
         "Built React Native app managing 5,000+ Starlink terminals",
@@ -31,7 +32,7 @@ export const experience = [
       role: "AI Engineer",
       company: "TURING (with Google)",
       period: "Aug 2024 - Mar 2025",
-      icon: Brain,
+      icon: TuringIcon,
       xp: 75,
       highlights: [
         "Enhanced Gemini 2.5 Pro using RLHF",
@@ -55,7 +56,7 @@ export const experience = [
       role: "SDE Intern",
       company: "TATA ELXSI",
       period: "Mar 2024 - Jul 2024",
-      icon: Award,
+      icon: TataIcon,
       xp: 75,
       highlights: [
         "Won 'Extra Mile Award'",
