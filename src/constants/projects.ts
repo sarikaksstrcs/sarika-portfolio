@@ -35,6 +35,7 @@ export const projects = [
       description: "AI-powered mental health companion with GPT-3 and immersive 3D UI",
       tech: ["MERN", "GPT-3", "React Native", "LangChain", "3D"],
       stars: 5,
+      github:'https://github.com/sarikaksstrcs/MentalEase.ai',
       xp: 60,
       details: {
         overview: "An innovative mental health support application combining AI technology with immersive 3D experiences.",
@@ -53,6 +54,7 @@ export const projects = [
           design: "Blender for 3D asset creation"
         },
         impact: "Provides accessible mental health support with engaging user experience"
+        
       }
     },
     {

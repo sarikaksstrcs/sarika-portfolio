@@ -1,4 +1,4 @@
-import { ArrowLeft, Star, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Star, X } from "lucide-react";
 export const ProjectDetailModal = ({ project, onClose, completedActions, addXP }) => {
   if (!project) return null;
 
@@ -8,6 +8,14 @@ export const ProjectDetailModal = ({ project, onClose, completedActions, addXP }
     }
     onClose();
   };
+
+  const handleGithubClick = (e) => {
+    e.stopPropagation();
+    if (project.github) {
+      window.open(project.github, '_blank');
+    }
+  };
+  console.log(project);
 
   return (
     <div className="fixed inset-0 bg-black/95 z-50 overflow-y-auto p-6">
@@ -35,6 +43,16 @@ export const ProjectDetailModal = ({ project, onClose, completedActions, addXP }
           </div>
           <p className="text-xl font-mono mb-2">{project.tagline}</p>
           <p className="text-gray-600 font-mono">{project.year}</p>
+     
+          {project.github && (
+            <button
+              onClick={handleGithubClick}
+              className="mt-4 flex items-center gap-2 px-4 py-2 border-2 border-black hover:bg-black hover:text-white transition-all font-mono">
+              <Github size={20} />
+              View on GitHub
+              <ExternalLink size={16} />
+            </button>
+          )}
         </div>
 
         <div className="mb-6">

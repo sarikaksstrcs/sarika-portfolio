@@ -18,6 +18,7 @@ import { ExperienceDetailModal } from './atoms/ExperianceModal';
 import { ProjectDetailModal } from './atoms/ProjectDetailModal';
 import { Style } from './atoms/Style';
 import { HeroSection } from './molecules/Hero';
+import { ContentSection } from './molecules/ContentSection';
 
 
 const Portfolio = () => {
@@ -129,6 +130,12 @@ const Portfolio = () => {
 
       {/* Education & Certifications - Condensed */}
       <CredentialsSection
+      />
+      
+      {/* Content Section */}
+      <ContentSection
+        handleContentClick={addXP}
+        completedActions={completedActions}
       />
 
       {/* Footer */}
