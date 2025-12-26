@@ -1,0 +1,94 @@
+export const Style = () => {
+    return (
+        <style>{`
+        @keyframes fall {
+          0% {
+            transform: translateY(-100vh);
+            opacity: 0;
+          }
+          10% {
+            opacity: 0.3;
+          }
+          90% {
+            opacity: 0.3;
+          }
+          100% {
+            transform: translateY(100vh);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes glitch {
+          0%, 100% {
+            transform: translate(0);
+          }
+          20% {
+            transform: translate(-2px, 2px);
+          }
+          40% {
+            transform: translate(-2px, -2px);
+          }
+          60% {
+            transform: translate(2px, 2px);
+          }
+          80% {
+            transform: translate(2px, -2px);
+          }
+        }
+        
+        @keyframes type {
+          0% {
+            opacity: 0;
+            transform: translateX(-10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes level-up {
+          0% {
+            transform: scale(0) rotate(-180deg);
+            opacity: 0;
+          }
+          50% {
+            transform: scale(1.2) rotate(10deg);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1) rotate(0deg);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes ping-slow {
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+        
+        .animate-fall {
+          animation: fall linear infinite;
+        }
+        
+        .animate-glitch {
+          animation: glitch 3s infinite;
+        }
+        
+        .animate-type {
+          animation: type 1s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animate-level-up {
+          animation: level-up 2s ease-out forwards;
+        }
+        
+        .animate-ping-slow {
+          animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+      `}</style>
+    );
+}
