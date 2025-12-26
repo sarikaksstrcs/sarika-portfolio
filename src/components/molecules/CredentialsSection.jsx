@@ -3,7 +3,7 @@ import { Award, Trophy } from "lucide-react";
 export const CredentialsSection = () => {
   return (
     <section className="py-20 px-6 border-t-2 border-white/20">
-      <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 font-mono">
+      <h2 className="text-3xl md:text-6xl font-bold text-center mb-16 font-mono">
         // CREDENTIALS
       </h2>
       

@@ -10,8 +10,8 @@ export const HeroSection = ({ handleSocialClick, completedActions, setShowResume
           </div>
           <Terminal className="w-20 h-20 text-white relative z-10 animate-pulse" />
         </div>
-        
-        <h1 className="text-7xl md:text-9xl font-bold mb-4 font-mono tracking-tighter animate-glitch">
+
+        <h1 className="text-5xl  md:text-9xl font-bold mb-4 font-mono tracking-tighter animate-glitch">
           K S SARIKA
         </h1>
         

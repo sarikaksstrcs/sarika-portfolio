@@ -3,7 +3,7 @@ import { ProjectCard } from "../atoms/ProjectCard";
 export const ProjectsSection = ({ projects, completedActions, setSelectedProject }) => {
   return (
     <section className="py-20 px-6 border-t-2 border-white/20">
-      <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 font-mono">
+      <h2 className="text-3xl md:text-6xl font-bold text-center mb-4 font-mono">
         // PROJECT_ARCHIVE
       </h2>
       <p className="text-center text-gray-400 mb-4 font-mono">Click to explore project details</p>

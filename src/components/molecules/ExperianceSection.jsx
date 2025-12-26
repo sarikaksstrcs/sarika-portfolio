@@ -3,7 +3,7 @@ import { ExperienceCard } from "../atoms/ExperienceCard";
 export const ExperienceSection = ({ experience, completedActions, setSelectedExperience }) => {
   return (
     <section className="py-20 px-6">
-      <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 font-mono">
+      <h2 className="text-3xl md:text-6xl font-bold text-center mb-4 font-mono">
         // EXPERIENCE_LOG
       </h2>
       <p className="text-center text-gray-400 mb-4 font-mono">Click to view details and earn XP</p>
