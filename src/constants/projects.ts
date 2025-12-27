@@ -32,6 +32,7 @@ export const projects = [
       name: "Patent Interview Chatbot",
       year: "2024",
       tagline: "AI Interview Assistant for Patent Applications",
+      github:"https://github.com/sarikaksstrcs/Patent-Application-Full-Project",
       liveDemoUrl: "https://patent-interview-application.onrender.com",
       description: "A chatbot that conducts simulated patent application interviews using GPT-3 and Whisper for speech recognition and AI guidance.",
       tech: ["React", "Node.js", "FastAPI", "GPT-3", "Whisper"],
