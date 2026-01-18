@@ -19,6 +19,8 @@ import { ProjectDetailModal } from './atoms/ProjectDetailModal';
 import { Style } from './atoms/Style';
 import { HeroSection } from './molecules/Hero';
 import { ContentSection } from './molecules/ContentSection';
+import { OpenSourceSection } from './molecules/OpenSourceSection';
+import { openSourceContributions } from '../constants/openSource';
 
 
 const Portfolio = () => {
@@ -124,6 +126,12 @@ const Portfolio = () => {
         completedActions={completedActions}
         setSelectedProject={setSelectedProject}
       />
+      {openSourceContributions && openSourceContributions.length > 0 && (
+        <OpenSourceSection
+          completedActions={completedActions}
+          addXP={addXP}
+        />
+      )}
 
       {/* Skills Section */}
       <SkillsSection skills={skills} />

@@ -88,33 +88,6 @@ export const projects = [
       }
     },
     {
-      id: 'codeanalyzer',
-      name: "Code Impact Analyzer",
-      year: "2024",
-      tagline: "Automated Code Quality Tool",
-      description: "Backend pipeline for automated test generation and vulnerability detection",
-      tech: ["Python", "REST API", "GitHub", "OpenAI"],
-      stars: 4,
-      xp: 60,
-      details: {
-        overview: "An intelligent code analysis tool that automatically generates tests and identifies security vulnerabilities.",
-        features: [
-          "Automated test generation using AI",
-          "Dependency analysis and mapping",
-          "Vulnerability detection and fixes",
-          "GitHub integration for seamless workflow",
-          "Real-time codebase insights",
-          "Automated patch recommendations"
-        ],
-        techStack: {
-          backend: "Python for processing and analysis",
-          api: "REST API for GitHub integration",
-          ai: "OpenAI for intelligent code understanding"
-        },
-        impact: "Improves code quality and security through automated analysis"
-      }
-    },
-    {
       id: 'swasthyachain',
       name: "SwasthyaChain",
       year: "2025",
@@ -164,6 +137,34 @@ export const projects = [
       impact:
         "Demonstrates a production-grade full-stack healthcare system that prioritizes data security, patient ownership, and transparency while showcasing modern web technologies, decentralized systems, and applied AI in healthcare."
     }
-    }
+    },
+    {
+      id: 'codeanalyzer',
+      name: "Code Impact Analyzer",
+      year: "2024",
+      tagline: "Automated Code Quality Tool",
+      description: "Backend pipeline for automated test generation and vulnerability detection",
+      tech: ["Python", "REST API", "GitHub", "OpenAI"],
+      stars: 4,
+      xp: 60,
+      details: {
+        overview: "An intelligent code analysis tool that automatically generates tests and identifies security vulnerabilities.",
+        features: [
+          "Automated test generation using AI",
+          "Dependency analysis and mapping",
+          "Vulnerability detection and fixes",
+          "GitHub integration for seamless workflow",
+          "Real-time codebase insights",
+          "Automated patch recommendations"
+        ],
+        techStack: {
+          backend: "Python for processing and analysis",
+          api: "REST API for GitHub integration",
+          ai: "OpenAI for intelligent code understanding"
+        },
+        impact: "Improves code quality and security through automated analysis"
+      }
+    },
+    
 
 ];
