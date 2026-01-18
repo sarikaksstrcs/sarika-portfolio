@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Phone, Award, Briefcase, Code, Rocket, Sparkles, Terminal, Brain, Database, Cloud, Star, Trophy, Target, Zap, Download, ExternalLink, X, ArrowLeft, Check } from 'lucide-react';
+import ReactGA from 'react-ga4';
 
 import { getProgressMessage } from '../utils/progressmessage';
 import Particles from './atoms/Particles';
@@ -44,6 +45,7 @@ const Portfolio = () => {
       duration: 10 + Math.random() * 10
     }));
     setParticles(newParticles);
+    ReactGA.send("pageview");
   }, []);
 
   const addXP = (amount, actionId, achievementText) => {
