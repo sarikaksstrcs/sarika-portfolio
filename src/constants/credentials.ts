@@ -33,9 +33,9 @@ export const EDUCATION: EducationItem[] = [
 
 export const CERTIFICATIONS: CertificationItem[] = [
 {
-    title: "Microsoft Azure AI",
+    title: "Microsoft Azure Fundamentals AZ 900",
     issuer: "Microsoft",
-    year: "2024",
+    year: "2026",
     certificateUrl: "https://learn.microsoft.com/en-us/users/sarikaks-9948/credentials/9f0e3354c72198ac?ref=https%3A%2F%2Fwww.linkedin.com%2F",
     certificateId: "9F0E3354C72198AC",
   },
