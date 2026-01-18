@@ -7,12 +7,12 @@ export const StatsHUD = ({ level, xp, xpProgress, xpToNextLevel, achievements, g
 
   return (
     <>
-      {/* Mobile: Compact floating button */}
-      <div className="md:hidden fixed top-4 right-4 z-50">
+      {/* Mobile, Tablet & iPad Landscape: Compact floating button */}
+      <div className="xl:hidden fixed top-4 right-4 z-50">
         {!isExpanded ? (
           <button
             onClick={() => setIsExpanded(true)}
-            className="bg-black border-2 border-white p-3 rounded-lg font-mono shadow-lg"
+            className="bg-black/80 backdrop-blur-sm border-2 border-white p-3 rounded-lg font-mono shadow-2xl hover:bg-black/90 transition-all"
           >
             <div className="flex items-center gap-2 mb-2">
               <Target className="w-4 h-4" />
@@ -24,13 +24,13 @@ export const StatsHUD = ({ level, xp, xpProgress, xpToNextLevel, achievements, g
             </div>
           </button>
         ) : (
-          <div className="bg-black border-2 border-white p-4 rounded-lg font-mono shadow-lg w-72 max-w-[calc(100vw-2rem)]">
+          <div className="bg-black/90 backdrop-blur-md border-2 border-white p-4 rounded-lg font-mono shadow-2xl w-72 max-w-[calc(100vw-2rem)]">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
                 <Target className="w-4 h-4" />
                 <span className="text-sm">LEVEL {level}</span>
               </div>
-              <button onClick={() => setIsExpanded(false)}>
+              <button onClick={() => setIsExpanded(false)} className="hover:text-gray-300">
                 <X className="w-4 h-4" />
               </button>
             </div>
@@ -79,8 +79,8 @@ export const StatsHUD = ({ level, xp, xpProgress, xpToNextLevel, achievements, g
         )}
       </div>
 
-      {/* Desktop: Full display */}
-      <div className="hidden md:block fixed top-6 right-6 z-50 bg-black border-2 border-white p-4 rounded-lg font-mono max-w-xs">
+      {/* Desktop (Large screens): Full floating display */}
+      <div className="hidden xl:block fixed top-6 right-6 z-50 bg-black/80 backdrop-blur-md border-2 border-white p-4 rounded-lg font-mono max-w-xs shadow-2xl">
         <div className="flex items-center gap-3 mb-2">
           <Target className="w-5 h-5" />
           <span className="text-sm">RECRUITER LEVEL {level}</span>
