@@ -24,7 +24,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
     description: "Default lineGradient to false for areaChart ",
     impact: "Fixed Line chart coloring issue #1080",
     technologies: ["JavaScript", "React Native", "Bug Fix"],
-    stars: 1,
+    stars: 0,
     url: "https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts",
     year: "2026"
   },

@@ -51,8 +51,8 @@ export const ContributionCard = ({ contribution, completedActions, onClick }) =>
       </p>
       
       <div className="flex items-center gap-2 mb-4">
-        <Star className="w-4 h-4 fill-white group-hover:fill-black" />
-        <span className="text-xs font-mono">{(contribution.stars / 1000).toFixed(0)}k stars</span>
+        <Star className={`w-4 h-4 ${contribution.stars > 0 ? "fill-white" : ''} group-hover:${contribution.stars > 0 ? "fill-black" : ''}`} />
+        <span className="text-xs font-mono">{(contribution.stars / 1000).toFixed(0)} stars</span>
       </div>
       
       <div className="flex flex-wrap gap-2 mb-4">
